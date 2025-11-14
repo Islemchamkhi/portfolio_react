@@ -11,3 +11,79 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+.profile-pic {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.profile-image {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.profile-image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+
+.contact-info {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  margin: 2rem auto;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  max-width: 600px;
+  border-left: 4px solid #d86464;
+}
+
+.contact-info p {
+  margin: 0.8rem 0;
+  font-size: 1.1rem;
+  color: #d86464;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+  .profile-image {
+    width: 140px;
+    height: 140px;
+  }
+  
+  .contact-info p {
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .contact-info {
+    margin: 1rem;
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-image {
+    width: 120px;
+    height: 120px;
+  }
+}
