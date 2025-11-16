@@ -1,38 +1,134 @@
-.App {
-  text-align: center;
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Arial', sans-serif; line-height: 1.6; color: #d86464; background: #ffeeee; }
+
+
+.app { min-height: 100vh; display: flex; flex-direction: column; }
+.main-content { flex: 1; padding: 20px; max-width: 1200px; margin: 0 auto; width: 100%; }
+
+
+.navbar { 
+  background: #ffb2b2e1; color: #ffeeee; padding: 1rem 2rem; 
+  display: flex; justify-content: space-between; align-items: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.0);
+}
+.nav-brand a { color: white; text-decoration: none; font-size: 2.1rem; font-weight: bold; }
+.nav-links { display: flex; gap: 1.5rem; align-items: center; }
+.nav-links a { color: white; text-decoration: none; padding: 0.5rem 1rem; border-radius: 4px; transition: 0.3s; }
+.nav-links a:hover { background: #ffeeee; }
+.logout-btn { background: #ffb2b2e1; color: white; border: none; padding: 0.5rem 1rem; cursor: pointer; border-radius: 4px; transition: 0.3s; }
+.logout-btn:hover { background: #ffeeee; }
+
+
+.footer { background: #ffb2b2e1; color: white; text-align: center; padding: 1.9rem; margin-top: auto; }
+.social-links { margin-top: 0.5rem; }
+.social-links a { color: white; margin: 0 0.5rem; text-decoration: none; transition: 0.3s; }
+.social-links a:hover { color: #ffb2b2e1; }
+
+
+
+.login-page, .contact-page { display: flex; justify-content: center; align-items: center; min-height: 70vh; padding: 2rem; }
+.login-form, .contact-form { 
+  background: white; padding: 2rem; border-radius: 8px; 
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1); width: 100%; max-width: 400px; 
+}
+.login-form h2, .contact-page h1 { text-align: center; margin-bottom: 1.5rem; color: #d86464; }
+
+
+.form-group { margin-bottom: 1.5rem; }
+.form-group label { display: block; margin-bottom: 0.5rem; font-weight: 500; color: #d86464; }
+.form-group input, .form-group textarea { 
+  width: 100%; padding: 0.75rem; border: 1px solid #ddd; border-radius: 4px; 
+  font-size: 1rem; transition: 0.3s; 
+}
+.form-group input:focus, .form-group textarea:focus { outline: none; border-color: #d86464; }
+button { 
+  background: #d86464; color: white; border: none; padding: 0.75rem 1.5rem; 
+  border-radius: 4px; cursor: pointer; width: 100%; font-size: 1rem; font-weight: 500; 
+  transition: 0.3s; 
+}
+button:hover { background: #ffb2b2e1; }
+
+
+
+
+.home-page { max-width: 1000px; margin: 0 auto; }
+.hero { 
+  text-align: center; padding: 3rem 0; background: linear-gradient(135deg, #ffb2b2 0%, #ce4fb4e1 100%); 
+  color: white; border-radius: 8px; margin-bottom: 3rem; 
+}
+.profile-pic-placeholder { 
+  width: 120px; height: 120px; background: rgba(255, 255, 255, 0.478); border-radius: 50%; 
+  display: flex; align-items: center; justify-content: center; font-size: 3rem; margin: 0 auto 1.5rem; 
+}
+.hero h1 { font-size: 2.5rem; margin-bottom: 1rem; }
+.hero p { font-size: 1.2rem; opacity: 0.9; }
+
+
+
+
+.skills { padding: 2rem 0; }
+.skills h2 { text-align: center; margin-bottom: 2rem; color: #a12e73; }
+.skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; }
+.skill-card { 
+  background: white; padding: 1.5rem; text-align: center; border-radius: 8px; 
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); transition: 0.3s; 
+}
+.skill-card:hover { transform: translateY(-2px); box-shadow: 0 4px 8px rgba(249, 4, 167, 0.937); }
+
+
+
+
+.projects-page h1 { text-align: center; margin-bottom: 2rem; color: #2c3e50; }
+.projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+.project-card { 
+  background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+  border: 1px solid #eee; transition: 0.3s; 
+}
+.project-card:hover { transform: translateY(-2px); box-shadow: 0 4px 8px rgba(0,0,0,0.15); }
+.project-card h3 { color: #2c3e50; margin-bottom: 1rem; }
+.project-card p { color: #666; margin-bottom: 1rem; }
+
+
+
+
+.technologies { margin: 1rem 0; }
+.tech-tag { 
+  background: #f29999e1; color: white; padding: 0.25rem 0.75rem; border-radius: 20px; 
+  font-size: 0.8rem; margin: 0.25rem; display: inline-block; 
+}
+.view-details { 
+  display: inline-block; margin-top: 1rem; color: #d66f6f; text-decoration: none; 
+  font-weight: 500; transition: 0.3s; 
+}
+.view-details:hover { color: #f19a9ae1; text-decoration: underline; }
+
+
+
+
+.project-detail { max-width: 800px; margin: 0 auto; }
+.back-link { display: inline-block; margin-bottom: 2rem; color: rgb(253, 75, 104);; text-decoration: none; font-weight: 500; }
+.back-link:hover { text-decoration: underline; }
+.project-detail h1 { color: rgb(253, 75, 104); margin-bottom: 1.5rem; }
+.project-full-description { font-size: 1.1rem; line-height: 1.7; color: pink; margin-bottom: 2rem; }
+.technologies-section { margin: 2rem 0; }
+.technologies-section h3 { margin-bottom: 1rem; color: rgb(253, 75, 104);; }
+.project-links { margin-top: 2rem; display: flex; gap: 1rem; }
+.project-link { 
+  background: rgba(231, 132, 149, 0.915);; color: white; padding: 0.75rem 1.5rem; text-decoration: none; 
+  border-radius: 4px; transition: 0.3s; 
+}
+.project-link:hover { background: #ffb2b2e1; }
+
+
+
+
+@media (max-width: 768px) {
+  .navbar { flex-direction: column; gap: 1rem; padding: 1rem; }
+  .nav-links { flex-wrap: wrap; justify-content: center; }
+  .hero h1 { font-size: 2rem; }
+  .project-links { flex-direction: column; }
+  .main-content { padding: 1rem; }
+  .skills-grid, .projects-grid { grid-template-columns: 1fr; }
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
